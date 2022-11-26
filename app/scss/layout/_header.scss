@@ -1,0 +1,55 @@
+/*------------------HEADER------------------*/
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 35px;
+    margin-bottom: 100px;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+  }
+
+  &__link {
+    margin-right: 50px;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__sub-list {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 100px;
+  }
+
+  &__sub-list li {
+    padding: 3px;
+  }
+
+  &__menu-sub {
+    position: relative;
+  }
+
+  &__menu-sub:hover &__sub-list {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+
+    left: 10px;
+  }
+
+  &__menu-list {
+    display: flex;
+    font-weight: 600;
+  }
+
+  &__menu-link {
+    margin: 10px 15px;
+    display: block;
+  }
+}
+
+/*-------------------------------------------*/
