@@ -1,0 +1,26 @@
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 7px
+}
+.swiper-pagination-bullet-active {
+  background: #78258d;
+  position: relative;
+  border: 1px solid #78258d;
+  width: 9px;
+  height: 9px;
+}
+
+.swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  width: 17.5px;
+  height: 17.5px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 2px solid #78258d;
+}

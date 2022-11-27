@@ -1,5 +1,5 @@
 /*------------------BUTTONS------------------*/
-.btn {
+.btn-primary {
     padding: 12px 18px;
     background-color: #78258D;
     border: none;
@@ -10,6 +10,13 @@
 
 .btn:hover {
     cursor: pointer;
+}
+
+.btn-secondary {
+    padding: 12px 18px;
+    border: 1px solid #78258D;
+    border-radius: 8px;
+    color: #78258D;
 }
 
 

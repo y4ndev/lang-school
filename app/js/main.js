@@ -1,6 +1,7 @@
 new Swiper(".courses__slides", {
   pagination: {
     el: ".swiper-pagination",
+    clickable: true
   },
 
   direction: "horizontal",
