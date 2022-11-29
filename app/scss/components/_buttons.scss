@@ -1,27 +1,27 @@
 /*------------------BUTTONS------------------*/
 .btn-primary {
-    padding: 12px 18px;
-    background-color: #78258D;
-    border: none;
-    border-radius: 8px;
-    color: #ffffff;
-    font-weight: 600;
+  padding: 20px 40px;
+  background-color: #78258d;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 600;
+  display: inline-block;
 }
 
-.btn:hover {
-    cursor: pointer;
+.btn-primary:hover {
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  cursor: pointer;
 }
 
 .btn-secondary {
-    padding: 12px 18px;
-    border: 1px solid #78258D;
-    border-radius: 8px;
-    color: #78258D;
+  padding: 12px 18px;
+  border: 1px solid #78258d;
+  border-radius: 8px;
+  color: #78258d;
+  display: inline-block;
 }
-
-
-
-
-
 
 /*---------------------------------------------*/
