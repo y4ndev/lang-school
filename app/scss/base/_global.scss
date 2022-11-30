@@ -1,9 +1,9 @@
 /*------------------GLOBAL------------------*/
 
 :root {
-  --fs-xl: 4rem;
+  --fs-xl: 3.8rem;
   --fs-l: 2.87rem;
-  --fs-m: 2.25rem;
+  --fs-m: 1.5rem;
 }
 
 html {
@@ -53,13 +53,14 @@ h2 {
   font-size: var(--fs-l);
   line-height: 1.1em;
   font-weight: 800;
-  margin: 20px 0;
+  margin-top: 0;
 }
 
 h3 {
   font-size: var(--fs-m);
   line-height: 1.1em;
   font-weight: 700;
+  margin: 0;
 }
 
 .wrapper {
@@ -73,101 +74,7 @@ h3 {
   margin: 0 auto;
 }
 
-.card {
-  &__item {
-    padding: 40px;
-    box-sizing: border-box;
-    transition: 0.5s;
-    -webkit-box-shadow: 0;
-    -moz-box-shadow: 0;
-    box-shadow: 0;
-    border-radius: 10px;
-  }
 
-  &__item--german {
-    background-color: #def1ff;
-  }
-
-  &__item--german:hover {
-    transition: 0.5s;
-    -webkit-box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
-    -moz-box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
-    box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
-  }
-
-
-  &__item--china {
-    background-color: #fdede4;
-  }
-
-  &__item--china:hover {
-    transition: 0.5s;
-    -webkit-box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
-    -moz-box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
-    box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
-  }
-
-  &__item--spain {
-    background-color: #efefff;
-  }
-
-  &__item--spain:hover {
-    transition: 0.5s;
-    -webkit-box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
-    -moz-box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
-    box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
-  }
-
-  &__item img {
-    margin-left: 0;
-    margin-bottom: 20px;
-  }
-
-  &__item-text--big {
-    display: block;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 30px;
-    color: #232323;
-    margin-bottom: 20px;
-  }
-
-  &__item-text {
-    display: block;
-    margin-bottom: 3px;
-  }
-
-  &__item-info {
-    margin-bottom: 20px;
-  }
-
-  &__item-detail {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__item-link {
-    position: relative;
-    color: #8e49a0;
-    font-weight: 600;
-  }
-
-  &__item-link::after {
-    content: "";
-    position: absolute;
-    margin-left: 10px;
-    width: 18px;
-    height: 20px;
-    background: url(../images/arrow-right.svg) no-repeat center;
-  }
-
-  &__item-price {
-    font-size: 20px;
-    line-height: 1.1em;
-    font-weight: 700;
-  }
-}
 
 .error {
   border: 1px #ff4019 solid !important;

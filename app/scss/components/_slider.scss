@@ -2,12 +2,23 @@
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 8px;
 }
+
+.swiper-pagination-bullets {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+
 .swiper-pagination-bullet-active {
   background: #78258d;
   position: relative;
   border: 1px solid #78258d;
-  width: 9px;
-  height: 9px;
+  width: 12px;
+  height: 12px;
 }
 
 .swiper-pagination-bullet-active::before {
@@ -17,8 +28,8 @@
   right: 50%;
   transform: translate(50%, -50%);
 
-  width: 17.5px;
-  height: 17.5px;
+  width: 22px;
+  height: 22px;
   display: block;
   margin: 0 auto;
   border-radius: 50%;

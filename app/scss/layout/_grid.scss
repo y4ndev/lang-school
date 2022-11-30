@@ -1,11 +1,112 @@
 /*------------------MAIN------------------*/
 
-.promo {
-  &__inner {
+/*---MAIN-GLOBAL---*/
+.card {
+  &__item {
+    padding: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    -webkit-box-shadow: 0;
+    -moz-box-shadow: 0;
+    box-shadow: 0;
+    border-radius: 10px;
+  }
+
+  &__item--german {
+    background-color: #def1ff;
+  }
+
+  &__item--german:hover {
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
+    -moz-box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
+    box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
+  }
+
+  &__item--china {
+    background-color: #fdede4;
+  }
+
+  &__item--china:hover {
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
+    -moz-box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
+    box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
+  }
+
+  &__item--spain {
+    background-color: #efefff;
+  }
+
+  &__item--spain:hover {
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
+    -moz-box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
+    box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
+  }
+
+  &__item img {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  &__item-text--big {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #232323;
+    margin-bottom: 20px;
+  }
+
+  &__item-text {
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  &__item-info {
+    margin-bottom: 25px;
+  }
+
+  &__item-detail {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__item-link {
+    position: relative;
+    color: #8e49a0;
+    font-weight: 600;
+  }
+
+  &__item-link::after {
+    content: "";
+    position: absolute;
+    margin-left: 10px;
+    width: 18px;
+    height: 20px;
+    background: url(../images/arrow-right.svg) no-repeat center;
+  }
+
+  &__item-price {
+    font-size: 20px;
+    line-height: 1.1em;
+    font-weight: 700;
+  }
+}
+/*-----------------*/
+
+.promo {
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     margin-bottom: 100px;
+  }
+
+  &__desc-title {
+    padding-top: 55px;
   }
 
   &__desc-name {
@@ -20,6 +121,7 @@
     line-height: 35px;
     color: #828282;
     max-width: 490px;
+    margin-bottom: 60px;
   }
 
   &__desc-btns {
@@ -54,11 +156,12 @@
 }
 
 .courses {
+  margin-bottom: 100px;
   &__title {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 18px;
   }
 
   &__title h2 {
@@ -75,7 +178,7 @@
     align-items: center;
     justify-content: space-between;
     min-width: 0;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 }
 
@@ -84,11 +187,13 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    padding-top: 100px;
+    margin-bottom: 100px;
   }
 
   &__desc {
-    flex-shrink: 0;
     max-width: 453px;
+    margin-right: 20px;
   }
 
   &__desc-title {
@@ -110,12 +215,10 @@
   }
 
   &__desc-text {
-    // width: 375px;
     font-weight: 500;
     font-size: 20px;
     color: #585858;
-    margin-bottom: 35px;
-    font-size: 18px;
+    margin-bottom: 50px;
   }
 
   &__desc-btn {
@@ -124,35 +227,32 @@
 
   &__items {
     display: flex;
-    justify-content: flex-start;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     flex-wrap: wrap;
+    gap: 20px 40px;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex-basis: 453px;
     text-align: left;
-    margin-bottom: 40px;
     padding: 20px 40px;
-    flex-basis: 49.9%
   }
 
   &__item h3 {
     margin-top: 20px;
-    margin-bottom: 15px;
   }
 
   &__item-text {
-   
     font-weight: 500;
     line-height: 24px;
     max-width: 375px;
   }
 
   &__item img {
-   margin-left: 0;
+    margin-left: 0;
   }
 }
 
