@@ -1,7 +1,7 @@
 new Swiper(".courses__slides", {
   pagination: {
     el: ".swiper-pagination",
-    clickable: true
+    clickable: true,
   },
 
   direction: "horizontal",
@@ -11,4 +11,13 @@ new Swiper(".courses__slides", {
   spaceBetween: 40,
 });
 
+new Swiper(".reviews__slides", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 
+  slidesPerView: 1,
+});
+
+console.log("hello");

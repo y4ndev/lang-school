@@ -395,12 +395,10 @@
 
   &__desc {
     max-width: 596px;
-
   }
 
   &__image {
     align-self: flex-end;
-   
   }
 
   &__desc-name {
@@ -423,8 +421,10 @@
   }
 }
 
-
 .tutorial {
+  &__inner {
+    margin-bottom: 100px;
+  }
 
   &__title {
     text-align: center;
@@ -442,7 +442,6 @@
     flex-direction: column;
     justify-content: center;
     padding: 40px;
-
     position: relative;
   }
 
@@ -458,13 +457,12 @@
   }
 
   &__item::before {
-    content: "01";
+    content: "";
     position: absolute;
     top: 40px;
     left: 40px;
     width: 63px;
     height: 28px;
-    background-color: #e42125;
     border-radius: 100px;
     line-height: 28px;
     text-align: center;
@@ -473,7 +471,107 @@
     font-weight: 600;
   }
 
+  &__item:nth-child(1)::before {
+    content: "1";
+    background-color: #2e90d1;
+  }
 
+  &__item:nth-child(2)::before {
+    content: "2";
+    background-color: #2e90d1;
+  }
+
+  &__item:nth-child(3)::before {
+    content: "3";
+    background-color: #e42125;
+  }
+}
+
+.reviews {
+  &__inner {
+    margin-bottom: 100px;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &__title h2 {
+    max-width: 439px;
+  }
+
+  &__users {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+ 
+
+  }
+
+
+  &__image img{
+   object-position: 40px -30px;
+   object-fit: contain;
+  }
+
+  &__items {
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    
+  }
+
+  &__item {
+    box-sizing: border-box;
+    padding: 40px;
+    max-width: 700px;
+    background-color: #fdede4;
+    border-radius: 10px;
+  }
+
+  &__item-rating {
+    display: flex;
+    align-self: flex-start;
+    gap: 0 7px;
+  }
+
+  &__item-title {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+  }
+
+  &__item-name > * {
+    display: block;
+  }
+
+  &__item-name--full {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__item-name--type {
+    font-size: 20px;
+    font-weight: 500;
+    color: #828282;
+  }
+
+
+
+  &__item-text {
+    color: #4F4F4F;
+    max-width: 620px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
 }
 
 /*------------------------------------------*/
