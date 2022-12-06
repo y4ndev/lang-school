@@ -449,17 +449,20 @@
                 </div>
                 <form class="record__form">
                   <label>
-                    <input type="tel" placeholder="Введите номер" />
+                    <span class="record__form-name">Телефон *</span>
+                    <input class="record__form-input form__input" type="tel" placeholder="+7 (___) ___-__-__" />
                   </label>
-                  <button type="submit" class="record__btn btn">Начать обучение</button>
+                  <button type="submit" class="record__btn btn-primary">Начать обучение</button>
                 </form>
                 <div class="record__personal">
-                  Отправляя заявку, я соглашаюсь с
-                  <a href="#">политикой конфиденциальности и пользовательским соглашением</a>
+                  <input type="checkbox" class="record__personal-input form__check">
+                  <span class="record__personal-text"> Отправляя заявку, я соглашаюсь с
+                    <a href="#">политикой конфиденциальности и пользовательским соглашением</a></span>
+                 
                 </div>
               </div>
               <div class="record__image">
-                <img src="" alt="record" />
+                <img src="./images/register-bg.png" width="347" height="391" alt="record" />
               </div>
             </div>
           </section>

@@ -1,6 +1,31 @@
 /*------------------FORMS-STYLES------------------*/
 
+.form {
+    
+    &__input {
+        width: 407px;
+        padding: 15px 20px;
+        border-radius: 8px;
+        border: none;
+        box-sizing: border-box;
+    }
 
+    &__input:active {
+        outline: 0;
+    }
+
+    &__input:focus {
+        outline: none;
+        outline: 2px solid #78258D;
+    }
+
+    &__check {
+        display: inline-block;
+        width: 34px;
+        height: 24px;
+    }
+
+}
 
 
 

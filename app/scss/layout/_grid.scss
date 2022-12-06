@@ -423,7 +423,7 @@
 
 .tutorial {
   &__inner {
-    margin-bottom: 100px;
+    margin-bottom:100px;
   }
 
   &__title {
@@ -489,7 +489,7 @@
 
 .reviews {
   &__inner {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
   &__title {
     display: flex;
@@ -519,12 +519,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 70px;
+    box-sizing: border-box;
   }
 
   &__item {
-    box-sizing: border-box;
     padding: 40px;
-    max-width: 700px;
     background-color: #fdede4;
     border-radius: 10px;
   }
@@ -567,7 +566,66 @@
   }
 }
 
+.record {
+  background: rgb(46, 144, 209);
+  background: linear-gradient(147deg, rgba(46, 144, 209, 0.1) 35%, rgba(120, 37, 141, 0.1) 100%);
+  border-radius: 40px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 524px;
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    max-width: 560px;
+  }
+
+  &__form {
+    margin-bottom: 35px;
+  }
+
+  &__form-input {
+    margin-right: 15px;
+  }
+
+  &__btn {
+    padding: 15px 20px;
+  }
+
+  &__form-name {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  &__personal {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 600px;
+  }
+
+  &__personal-input {
+    margin-right: 10px;
+  }
+
+  &__personal-text {
+    display: inline-block;
+  }
+
+  &__personal-text a {
+    color: #2E90D1; 
+    text-decoration: underline;
+  }
+}
+
 .news {
+  &__inner {
+    margin-bottom: 100px;
+  }
 }
 
 /*------------------------------------------*/
