@@ -95,6 +95,53 @@
     font-weight: 700;
   }
 }
+
+.article {
+  &__item {
+    width: 453px;
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid #efefff;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+  }
+
+  &__item-title {
+    margin-bottom: 12px;
+  }
+
+  &__item-title a:hover {
+    color: #78258d;
+  }
+
+  &__item-date {
+    color: #2e90d1;
+  }
+
+  &__item-text {
+    color: #585858;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  &__item-interact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item-btn {
+    padding: 10px 20px;
+    background-color: #efefff;
+    font-weight: 500;
+  }
+
+  &__item-link {
+    color: #8e49a0;
+    font-weight: 500;
+  }
+}
 /*-----------------*/
 
 .promo {
@@ -183,6 +230,18 @@
 }
 
 .group {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 120px;
+    left: -200px;
+    background: url(../../images/group-bg.png) no-repeat;
+
+    width: 100%;
+    height: 100%;
+  }
   &__inner {
     display: flex;
     align-items: flex-start;
@@ -380,11 +439,10 @@
 }
 
 .methods {
-  background: rgb(46, 144, 209);
-  background: linear-gradient(147deg, rgba(46, 144, 209, 0.1) 35%, rgba(120, 37, 141, 0.1) 100%);
-  border-radius: 40px;
-
   &__inner {
+    background: rgb(46, 144, 209);
+    background: linear-gradient(147deg, rgba(46, 144, 209, 0.1) 35%, rgba(120, 37, 141, 0.1) 100%);
+    border-radius: 40px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -423,7 +481,7 @@
 
 .tutorial {
   &__inner {
-    margin-bottom:100px;
+    margin-bottom: 100px;
   }
 
   &__title {
@@ -442,6 +500,10 @@
     flex-direction: column;
     justify-content: center;
     padding: 40px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
     position: relative;
   }
 
@@ -567,11 +629,10 @@
 }
 
 .record {
-  background: rgb(46, 144, 209);
-  background: linear-gradient(147deg, rgba(46, 144, 209, 0.1) 35%, rgba(120, 37, 141, 0.1) 100%);
-  border-radius: 40px;
-
   &__inner {
+    background: rgb(46, 144, 209);
+    background: linear-gradient(147deg, rgba(46, 144, 209, 0.1) 35%, rgba(120, 37, 141, 0.1) 100%);
+    border-radius: 40px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -617,7 +678,7 @@
   }
 
   &__personal-text a {
-    color: #2E90D1; 
+    color: #2e90d1;
     text-decoration: underline;
   }
 }
@@ -626,6 +687,45 @@
   &__inner {
     margin-bottom: 100px;
   }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &__title h2 {
+    margin-bottom: 0;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item-interact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+}
+
+
+.questions {
+
+ &__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+ }
+
+ &__title {
+  max-width: 445px;
+  margin-bottom: 60px;
+ }
 }
 
 /*------------------------------------------*/
