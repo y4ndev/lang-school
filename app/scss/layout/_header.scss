@@ -13,10 +13,26 @@
     margin-right: 50px;
   }
 
+  &__menu-btn {
+    padding: 15px 20px;
+  }
+
   &__menu {
     display: flex;
     align-items: center;
   }
+
+  &__menu-more {
+    display: inline-block;
+    font-size: 35px;
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    right: -5px;
+    transform: rotate(-90deg);
+  }
+
+
 
   &__sub-list {
     position: absolute;
@@ -26,7 +42,7 @@
   }
 
   &__sub-list li {
-    padding: 3px;
+    padding: 5px;
   }
 
   &__menu-sub {

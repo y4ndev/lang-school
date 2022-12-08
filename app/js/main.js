@@ -20,4 +20,25 @@ new Swiper(".reviews__slides", {
   slidesPerView: 1,
 });
 
-console.log("hello");
+/*---Animation---*/
+AOS.init();
+
+/*---Accordion---*/
+document.addEventListener("DOMContentLoaded", () => {
+  const accordions = document.querySelectorAll(".faq__item");
+
+  accordions.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      const self = e.currentTarget;
+      const content = self.querySelector(".faq__content");
+
+      self.classList.toggle("open");
+
+      if (self.classList.contains("open")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
+  });
+});

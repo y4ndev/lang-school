@@ -142,6 +142,108 @@
     font-weight: 500;
   }
 }
+
+.faq {
+  &__item {
+    max-width: 947px;
+    margin-bottom: 24px;
+    -webkit-box-shadow: 0px 4px 17px -7px rgba(46, 144, 209, 0.31);
+    -moz-box-shadow: 0px 4px 17px -7px rgba(46, 144, 209, 0.31);
+    box-shadow: 0px 4px 17px -7px rgba(46, 144, 209, 0.31);
+  }
+  &__btn {
+    padding: 24px;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 24px;
+    will-change: max-height;
+    font-weight: 500;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all 0.3s ease-out;
+    background-color: #efefff;
+  }
+  .open &__content {
+    opacity: 1;
+    padding-bottom: 24px;
+    box-sizing: content-box;
+  }
+
+  .open &__btn {
+    background-color: #efefff;
+  }
+
+  &__ico {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  &__ico::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all 0.3s;
+    width: 18.5px;
+    border-radius: 5px;
+    height: 2px;
+    background-color: #641f76;
+  }
+
+  &__ico::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: rotate(90deg);
+    transition: all 0.3s;
+    width: 18.5px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #641f76;
+  }
+
+  .open &__ico {
+    background-color: #641f76;
+    border-radius: 4px;
+  }
+
+  .open &__ico::before {
+    transform: rotate(45deg);
+    background-color: #efefff;
+  }
+
+  .open &__ico::after {
+    transform: rotate(135deg);
+    background-color: #efefff;
+  }
+}
+
 /*-----------------*/
 
 .promo {
@@ -462,7 +564,7 @@
   &__desc-name {
     background: rgb(46, 144, 209);
     background: linear-gradient(180deg, rgba(46, 144, 209, 1) 35%, rgba(120, 37, 141, 1) 100%);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
@@ -710,22 +812,20 @@
     align-items: center;
     justify-content: space-between;
   }
-
 }
 
-
 .questions {
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
 
- &__inner {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
- }
-
- &__title {
-  max-width: 445px;
-  margin-bottom: 60px;
- }
+  &__title {
+    max-width: 445px;
+    margin-bottom: 60px;
+  }
 }
 
 /*------------------------------------------*/
