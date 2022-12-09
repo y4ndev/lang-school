@@ -254,6 +254,9 @@
     margin-bottom: 100px;
   }
 
+  &__desc {
+    max-width: 700px;
+  }
   &__desc-title {
     padding-top: 55px;
   }
@@ -284,6 +287,7 @@
     line-height: 18px;
     padding: 18px 28px;
     margin-right: 32px;
+    white-space: nowrap;
   }
 
   &__desc-check {
@@ -301,6 +305,12 @@
     background: url(../../images/video-start.svg) no-repeat;
     width: 100%;
     height: 110%;
+  }
+
+  &__image img {
+    object-fit: contain;
+    min-width: 550px;
+    
   }
 }
 
@@ -826,6 +836,21 @@
     max-width: 445px;
     margin-bottom: 60px;
   }
+}
+
+
+//-----MEDIA-----//
+
+
+@include xl {
+
+  .promo {
+    &__desc-try, &__desc-check {
+      font-size: 16px;
+      padding: 18px;
+    }
+  }
+
 }
 
 /*------------------------------------------*/

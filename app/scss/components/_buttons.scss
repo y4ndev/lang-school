@@ -25,4 +25,13 @@
   display: inline-block;
 }
 
+
+//----MEDIA-BTN----//
+
+@include xl {
+  .btn-primary {
+    padding: 20px 20px;
+  }
+}
+
 /*---------------------------------------------*/

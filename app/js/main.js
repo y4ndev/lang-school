@@ -1,3 +1,4 @@
+/*Slider*/
 new Swiper(".courses__slides", {
   pagination: {
     el: ".swiper-pagination",
@@ -41,4 +42,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+});
+
+/*Burger-menu*/
+let burger = document.querySelector(".burger__menu");
+let burgerMenu = document.querySelector(".header__menu");
+let burgerClose = document.querySelector(".burger__close");
+
+burger.addEventListener("click", () => {
+  burgerMenu.classList.add("active");
+  burgerClose.classList.add("active");
+  document.body.style.overflow = "hidden";
+});
+burgerClose.addEventListener("click", () => {
+  burgerMenu.classList.remove("active");
+  burgerClose.classList.remove("active");
+  document.body.style.overflow = "auto";
 });
