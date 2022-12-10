@@ -17,28 +17,28 @@
   content: "";
   position: absolute;
   top: 5px;
-  background-color: #333333;
+  background-color: #641f76;
   width: 100%;
   height: 0.3em;
-  border-radius: 10px;
+
 }
 .burger__menu::after {
   content: "";
   position: absolute;
   top: 16px;
-  background-color: #333333;
+  background-color: #641f76;
   width: 100%;
   height: 0.3em;
-  border-radius: 10px;
+ 
 }
 
 .burger__menu span {
   position: absolute;
   top: 26px;
-  background-color: #333333;
+  background-color: #641f76;
   width: 100%;
   height: 0.3em;
-  border-radius: 10px;
+  
 }
 
 .burger__menu-name {
@@ -92,7 +92,7 @@
 
 ////////////////////////MEDIA////////////////////
 
-@include xl {
+@include md {
   .burger__menu {
     display: block;
   }

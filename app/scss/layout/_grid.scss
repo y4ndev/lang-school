@@ -10,6 +10,7 @@
     -moz-box-shadow: 0;
     box-shadow: 0;
     border-radius: 10px;
+    max-width: 453px;
   }
 
   &__item--german {
@@ -301,7 +302,7 @@
     content: "";
     position: absolute;
     top: -2px;
-    left: 0;
+    left: 0px;
     background: url(../../images/video-start.svg) no-repeat;
     width: 100%;
     height: 110%;
@@ -310,7 +311,7 @@
   &__image img {
     object-fit: contain;
     min-width: 550px;
-    
+    overflow: hidden;
   }
 }
 
@@ -838,19 +839,83 @@
   }
 }
 
-
-//-----MEDIA-----//
-
+//-----MEDIA-GRID-----//
 
 @include xl {
-
   .promo {
-    &__desc-try, &__desc-check {
+    &__desc-try,
+    &__desc-check {
       font-size: 16px;
       padding: 18px;
     }
+
+    &__desc-check {
+      padding-left: 70px;
+    }
+  }
+}
+
+@include lg {
+  .card {
+    &__item-link {
+      font-size: 14px;
+    }
+
+    &__item-price {
+      font-size: 16px;
+    }
+  }
+  .promo {
+    &__desc {
+      max-width: 342px;
+    }
+
+    &__image img {
+      min-width: 380px;
+    }
   }
 
+  .courses {
+    &__title h2 {
+      max-width: 453px;
+    }
+  }
+}
+
+@include md {
+  .promo {
+    &__inner {
+      flex-direction: column-reverse;
+    }
+
+    &__image {
+      align-self: center;
+    }
+
+    &__desc-title {
+      padding-top: 0;
+    }
+
+    &__image img {
+      max-width: 500px;
+    }
+  }
+}
+
+@include sm {
+  .promo {
+    &__desc-btns {
+      flex-direction: column;
+      align-self: center;
+      margin: 0 auto;
+    }
+
+    &__desc-btns > * {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+  }
 }
 
 /*------------------------------------------*/

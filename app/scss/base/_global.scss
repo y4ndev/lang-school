@@ -76,10 +76,18 @@ h3 {
   margin: 0 auto;
 }
 
-
-
 .error {
   border: 1px #ff4019 solid !important;
+}
+
+//----MEDIA-GLOBAL----//
+
+@include lg {
+  :root {
+    --fs-xl: 2.9rem;
+    --fs-l: 2rem;
+    --fs-m: 1.5rem;
+  }
 }
 
 /*--------------------------------------------*/
