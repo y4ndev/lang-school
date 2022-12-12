@@ -5,7 +5,6 @@ new Swiper(".courses__slides", {
     clickable: true,
   },
 
-
   loop: true,
   spaceBetween: 40,
 
@@ -16,11 +15,11 @@ new Swiper(".courses__slides", {
     },
     768: {
       slidesPerView: 2,
-      slidesPerGroup: 2
+      slidesPerGroup: 2,
     },
     320: {
       slidesPerView: 1,
-      slidesPerGroup: 1
+      slidesPerGroup: 1,
     },
   },
 });
@@ -37,6 +36,26 @@ new Swiper(".reviews__slides", {
     disableOnInteraction: true,
   },
 });
+
+if (matchMedia) {
+  let screen = window.matchMedia("(max-width:768px)");
+  screen.addEventListener("change", () => {
+    if (screen.matches) {
+      let slides = document.querySelector(".group__items");
+      slides.classList.add("swiper-wrapper");
+      new Swiper(".group__slides", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        slidesPerView: 1,
+      });
+    } else {
+      slides.classList.remove("swiper-wrapper");
+    }
+  });
+}
 
 /*---Animation---*/
 AOS.init();
