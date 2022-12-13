@@ -59,7 +59,7 @@
                 <div class="promo__desc-title">
                   <span class="promo__desc-name">Language to go</span>
                   <h1>Онлайн-школа иностранных языков</h1>
-                  <p class="promo__desc-text">
+                  <p class="promo__desc-text main-text">
                     Достигайте своих целей с помощью авторских игровых методик от носителей языка
                   </p>
                 </div>
@@ -212,7 +212,7 @@
                   <span class="group__desc-name">L2GO</span>
                 </div>
 
-                <p class="group__desc-text">
+                <p class="group__desc-text main-text">
                   <a class="group__desc-link" href="#">Language to go</a>
                   подойдет всем, кто хочет за короткий срок качественно изменить свою жизнь, освоив
                   иностранный язык.
@@ -268,8 +268,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="group__pagination swiper-pagination"></div>
               </div>
+              <div class="group__btn btn-primary">Попробовать бесплатно</div>
             </div>
           </div>
         </section>
@@ -283,10 +284,10 @@
               <div class="about__top" data-aos="fade-in">
                 <div class="about__top-info">
                   <span class="about__top-big about__big">Интересные уроки</span>
-                  <p class="about__top-text about__text">
+                  <p class="about__top-text about__text main-text">
                     Короткие, но насыщенные уроки до 45 минут.
                   </p>
-                  <p class="about__top-text about__text">
+                  <p class="about__top-text about__text main-text">
                     Более глубокий объем знаний, чем в других школах и даже чем предусмотрено
                     международными стандартами.
                   </p>
@@ -304,7 +305,7 @@
                   <div class="about__middle-title">
                     <span class="about__middle-big about__big">Общение с другими учащимися</span>
                   </div>
-                  <p class="about__middle-text about__text">
+                  <p class="about__middle-text about__text main-text">
                     Внутренний видеочат для общения с единомышленниками и отработки материала.
                     Завести новых друзей по интересам просто.
                   </p>
@@ -314,7 +315,7 @@
               <div class="about__bottom" data-aos="fade-in">
                 <div class="about__bottom-info">
                   <span class="about__bottom-big about__big">Удобный формат обучения</span>
-                  <p class="about__bottom-text about__text">
+                  <p class="about__bottom-text about__text main-text">
                     Полностью автоматический процесс обучения на одной платформе с доступом на любом
                     устройстве.
                   </p>
@@ -333,11 +334,19 @@
             <div class="methods__inner">
               <div class="methods__image">
                 <img src="../images/effect.png" width="495" height="560" alt="method" />
+                <div class="methods__image-title">
+                  <h2>
+                    Эффективная методика изучения языка <span class="methods__desc-name">L2GO</span>
+                  </h2>
+                </div>
               </div>
               <div class="methods__desc">
-                <h2>
-                  Эффективная методика изучения языка <span class="methods__desc-name">L2GO</span>
-                </h2>
+                <div class="methods__desc-title">
+                  <h2>
+                    Эффективная методика изучения языка <span class="methods__desc-name">L2GO</span>
+                  </h2>
+                </div>
+
                 <ul class="methods__desc-list">
                   <li>Самостоятельно выбираете удобный режим и время прохождения заданий</li>
                   <li>
@@ -354,36 +363,48 @@
           </div>
         </section>
 
-        <section class="tutorial" data-aos="fade-in">
+        <section class="tutorial" >
           <div class="container">
             <div class="tutorial__inner">
               <div class="tutorial__title">
                 <h2>Как это работает?</h2>
               </div>
-              <div class="tutorial__items">
-                <div class="tutorial__item">
-                  <div class="tutorial__item-title">
-                    <h3>Регистрация</h3>
-                  </div>
-                  <p class="tutorial__item-text">Выбирайте интересующий язык и регистрируйтесь.</p>
-                  <img src="./images/tutorial-1.png" alt="tutorial" />
-                </div>
+              <div class="tutorial__slides swiper">
+                <div class="tutorial__items">
+                  <div class="tutorial__item swiper-slide">
+                    <div class="tutorial__item-title">
+                      <h3>Регистрация</h3>
+                      <p class="tutorial__item-text">
+                        Выбирайте интересующий язык и регистрируйтесь.
+                      </p>
+                    </div>
 
-                <div class="tutorial__item">
-                  <div class="tutorial__item-title">
-                    <h3>Регистрация</h3>
+                    <img src="./images/tutorial-1.png" alt="tutorial" />
                   </div>
-                  <p class="tutorial__item-text">Выбирайте интересующий язык и регистрируйтесь.</p>
-                  <img src="./images/tutorial-1.png" alt="tutorial" />
-                </div>
 
-                <div class="tutorial__item">
-                  <div class="tutorial__item-title">
-                    <h3>Обучение</h3>
+                  <div class="tutorial__item swiper-slide">
+                    <div class="tutorial__item-title">
+                      <h3>Регистрация</h3>
+                      <p class="tutorial__item-text">
+                        Выбирайте интересующий язык и регистрируйтесь.
+                      </p>
+                    </div>
+
+                    <img src="./images/tutorial-1.png" alt="tutorial" />
                   </div>
-                  <p class="tutorial__item-text">Выбирайте интересующий язык и регистрируйтесь.</p>
-                  <img src="./images/tutorial-1.png" alt="tutorial" />
+
+                  <div class="tutorial__item swiper-slide">
+                    <div class="tutorial__item-title">
+                      <h3>Обучение</h3>
+                      <p class="tutorial__item-text">
+                        Выбирайте интересующий язык и регистрируйтесь.
+                      </p>
+                    </div>
+
+                    <img src="./images/tutorial-1.png" alt="tutorial" />
+                  </div>
                 </div>
+                <div class="swiper-pagination tutorial__pagination"></div>
               </div>
             </div>
           </div>

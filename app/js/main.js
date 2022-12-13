@@ -37,25 +37,50 @@ new Swiper(".reviews__slides", {
   },
 });
 
-if (matchMedia) {
-  let screen = window.matchMedia("(max-width:768px)");
-  screen.addEventListener("change", () => {
-    if (screen.matches) {
-      let slides = document.querySelector(".group__items");
-      slides.classList.add("swiper-wrapper");
-      new Swiper(".group__slides", {
+let init = false;
+let groupSlides = document.querySelector(".group__items");
+let tutorialSlides = document.querySelector(".tutorial__items");
+let screen = window.matchMedia("(max-width:768px)");
+
+function swiperCard() {
+  if (window.innerWidth <= 768 || screen.matches) {
+    if (!init) {
+      groupSlides.classList.add("swiper-wrapper");
+      tutorialSlides.classList.add("swiper-wrapper");
+      init = true;
+      swiper = new Swiper(".group__slides", {
+        direction: "horizontal",
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 32,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
-
-        slidesPerView: 1,
       });
-    } else {
-      slides.classList.remove("swiper-wrapper");
+
+      swiper2 = new Swiper(".tutorial__slides", {
+        direction: "horizontal",
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 32,
+        slidesPerView: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
     }
-  });
+  } else if (init) {
+    groupSlides.classList.remove("swiper-wrapper");
+    tutorialSlides.classList.remove("swiper-wrapper");
+    swiper.destroy();
+    swiper2.destroy();
+    init = false;
+  }
 }
+swiperCard();
+window.addEventListener("resize", swiperCard);
 
 /*---Animation---*/
 AOS.init();

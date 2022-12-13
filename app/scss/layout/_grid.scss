@@ -245,7 +245,7 @@
   }
 }
 
-/*-----------------*/
+//*=========================================================================================
 
 .promo {
   &__inner {
@@ -315,6 +315,8 @@
   }
 }
 
+//*=========================================================================================
+
 .courses {
   margin-bottom: 100px;
   &__title {
@@ -345,6 +347,8 @@
   }
 }
 
+//*=========================================================================================
+
 .group {
   position: relative;
 
@@ -365,7 +369,6 @@
     justify-content: space-between;
     padding-top: 100px;
     margin-bottom: 60px;
-    
   }
 
   &__desc {
@@ -402,21 +405,17 @@
     font-size: 18px;
   }
 
- 
- &__slides {
-  overflow: hidden;
-  width: 100%;
-  min-width: 0;
- 
- }
+  &__slides {
+    overflow: hidden;
+    width: 100%;
+    min-width: 0;
+  }
   &__items {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 10px 0;
     min-width: 0;
-  
-   
   }
 
   &__item {
@@ -427,7 +426,6 @@
     text-align: left;
     padding: 20px 40px;
     margin-bottom: 25px;
-  
   }
 
   &__item h3 {
@@ -443,7 +441,13 @@
   &__item img {
     margin-left: 0;
   }
+
+  &__btn {
+    display: none;
+  }
 }
+
+//*=========================================================================================
 
 .about {
   &__inner {
@@ -568,6 +572,8 @@
   }
 }
 
+//*=========================================================================================
+
 .methods {
   &__inner {
     background: rgb(46, 144, 209);
@@ -577,6 +583,7 @@
     align-items: center;
     justify-content: space-around;
     min-height: 650px;
+    padding: 10px;
 
     margin-bottom: 100px;
   }
@@ -609,6 +616,8 @@
   }
 }
 
+//*=========================================================================================
+
 .tutorial {
   &__inner {
     margin-bottom: 100px;
@@ -619,10 +628,17 @@
     margin-bottom: 60px;
   }
 
+  &__slides {
+    padding: 10px;
+    overflow: hidden;
+    min-width: 0;
+  }
+
   &__items {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
   }
 
   &__item {
@@ -634,12 +650,13 @@
     -webkit-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
     -moz-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
     box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
-    position: relative;
+    max-width: 33%;
   }
 
   &__item-title {
     padding-top: 60px;
     margin-bottom: 10px;
+    position: relative;
   }
 
   &__item-text {
@@ -648,11 +665,12 @@
     margin-bottom: 40px;
   }
 
-  &__item::before {
+  &__item-title::before {
     content: "";
+
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 0;
+    left: 0;
     width: 63px;
     height: 28px;
     border-radius: 100px;
@@ -663,21 +681,23 @@
     font-weight: 600;
   }
 
-  &__item:nth-child(1)::before {
+  &__item:nth-child(1) &__item-title::before {
     content: "1";
     background-color: #2e90d1;
   }
 
-  &__item:nth-child(2)::before {
+  &__item:nth-child(2) &__item-title::before {
     content: "2";
     background-color: #2e90d1;
   }
 
-  &__item:nth-child(3)::before {
+  &__item:nth-child(3) &__item-title::before {
     content: "3";
     background-color: #e42125;
   }
 }
+
+//*=========================================================================================
 
 .reviews {
   &__inner {
@@ -758,6 +778,8 @@
   }
 }
 
+//*=========================================================================================
+
 .record {
   &__inner {
     background: rgb(46, 144, 209);
@@ -813,6 +835,8 @@
   }
 }
 
+//*=========================================================================================
+
 .news {
   &__inner {
     margin-bottom: 100px;
@@ -842,6 +866,8 @@
   }
 }
 
+//*=========================================================================================
+
 .questions {
   &__inner {
     display: flex;
@@ -856,7 +882,8 @@
   }
 }
 
-//-----MEDIA-GRID-----//
+//*-----MEDIA-GRID-----//
+//*=========================================================================================
 
 @include xl {
   .promo {
@@ -872,6 +899,8 @@
   }
 }
 
+//*=========================================================================================
+
 @include lg {
   .card {
     &__item-link {
@@ -882,6 +911,7 @@
       font-size: 16px;
     }
   }
+
   .promo {
     &__desc {
       max-width: 342px;
@@ -926,9 +956,69 @@
       max-width: 332px;
     }
   }
+
+  .about {
+    &__top, &__bottom {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+
+    &__middle {
+      flex-direction: column;
+      margin-right: 0;
+      align-items: flex-start;
+    }
+
+    &__top-image img,
+    &__middle-image img,
+    &__bottom-image img {
+      object-fit: contain;
+      margin-bottom: 30px;
+    }
+  }
+
+  .methods {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__image {
+      display: flex;
+      align-items: center;
+    }
+
+    &__image img {
+      object-fit: contain;
+    }
+    &__desc-title {
+      display: none;
+    }
+
+    &__image-title {
+      display: block;
+    }
+  }
+
+  .tutorial {
+    &__items {
+      flex-direction: column;
+    }
+
+    &__item {
+      flex-direction: row;
+      align-items: center;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
 }
 
+//*=========================================================================================
+
 @include md {
+  .main-text {
+    font-size: 18px;
+  }
   .promo {
     &__inner {
       flex-direction: column-reverse;
@@ -948,25 +1038,79 @@
   }
 
   .group {
+    &__inner {
+      margin-bottom: 100px;
+    }
+
+    &__desc {
+      margin-bottom: 5px;
+    }
     &__items {
-    
-      align-items: center; 
+      align-items: center;
       box-sizing: border-box;
       flex-wrap: nowrap;
-   
     }
 
     &__item img {
-      margin: 0 auto
+      margin: 0 auto;
     }
 
     &__item {
-     max-width: 100%;
-     text-align: center;
-     align-items: center; 
+      max-width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+
+    &__desc-btn {
+      display: none;
+    }
+
+    &__btn {
+      display: block;
+      margin: 0 auto;
+      margin-top: 15px;
+    }
+  }
+
+  .methods {
+    &__image {
+      flex-direction: column;
+    }
+
+    &__image img {
+      height: 60%;
+    }
+
+    &__desc-list {
+      font-size: 18px;
+    }
+  }
+
+  .tutorial {
+    &__items {
+      flex-direction: row;
+      margin-bottom: 25px;
+    }
+
+    &__item {
+      flex-direction: column-reverse;
+    }
+
+    &__item-text {
+      margin-bottom: 5px;
+    }
+
+    &__item img {
+      margin-bottom: 15px;
+    }
+
+    &__item-title {
+      padding-top: 30px;
     }
   }
 }
+
+//*=========================================================================================
 
 @include sm {
   .promo {
@@ -990,6 +1134,14 @@
     &__btn-mobile {
       display: block;
       text-align: center;
+    }
+  }
+
+  .about {
+    &__top-image img,
+    &__bottom-image img,
+    &__middle-image img {
+      height: 60%;
     }
   }
 }
