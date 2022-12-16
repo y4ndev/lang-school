@@ -363,7 +363,7 @@
           </div>
         </section>
 
-        <section class="tutorial" >
+        <section class="tutorial">
           <div class="container">
             <div class="tutorial__inner">
               <div class="tutorial__title">
@@ -410,12 +410,12 @@
           </div>
         </section>
 
-        <section class="reviews" data-aos="fade-in">
+        <section class="reviews">
           <div class="container">
             <div class="reviews__inner">
               <div class="reviews__title">
                 <h2>Что говорят о нас ученики?</h2>
-                <a class="rewiews__btn btn-secondary" href="#">Все отзывы</a>
+                <a class="reviews__btn btn-secondary" href="#">Все отзывы</a>
               </div>
               <div class="reviews__users">
                 <div class="reviews__image">
@@ -503,17 +503,22 @@
               <div class="record__reg">
                 <div class="record__title">
                   <h2>Регистрируйтесь и приступайте к первому бесплатному уроку</h2>
+                  <div class="record__title-img">
+                    <img src="./images/register-bg.png" width="347" height="391" alt="record" />
+                  </div>
                 </div>
                 <form class="record__form">
-                  <label>
-                    <span class="record__form-name">Телефон *</span>
-                    <input
-                      class="record__form-input form__input"
-                      type="tel"
-                      placeholder="+7 (___) ___-__-__"
-                    />
-                  </label>
-                  <button type="submit" class="record__btn btn-primary">Начать обучение</button>
+                  <div class="record__form-inner">
+                    <label>
+                      <span class="record__form-name">Телефон *</span>
+                      <input
+                        class="record__form-input form__input"
+                        type="tel"
+                        placeholder="+7 (___) ___-__-__"
+                      />
+                    </label>
+                    <button type="submit" class="record__btn btn-primary">Начать обучение</button>
+                  </div>
                 </form>
                 <div class="record__personal">
                   <input type="checkbox" class="record__personal-input form__check" />
@@ -612,10 +617,17 @@
             <div class="questions__inner">
               <div class="questions__left">
                 <div class="questions__title">
-                  <h2>Отвечаем на частые вопросы</h2>
-                  <button type="button" class="questions__btn btn-primary">Задать вопрос</button>
+                  <div class="questions__title-header">
+                    <h2>Отвечаем на частые вопросы</h2>
+                    <button type="button" class="questions__btn btn-primary">Задать вопрос</button>
+                  </div>
+                  <div class="questions__title-image">
+                    <img src="../images/anwers-bg.png" alt="questions" />
+                  </div>
                 </div>
-                <img src="../images/anwers-bg.png" alt="questions" />
+                <div class="questions__image">
+                  <img src="../images/anwers-bg.png" alt="questions" />
+                </div>
               </div>
 
               <div class="questions__right">
