@@ -193,9 +193,10 @@
   }
 
   &__ico {
-    width: 32px;
+    min-width: 32px;
     height: 32px;
-    display: inline-block;
+    display: block;
+    margin-left: 10px;
     position: relative;
     transition: all 0.3s;
   }
