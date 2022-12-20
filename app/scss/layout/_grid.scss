@@ -1,99 +1,74 @@
 /*------------------MAIN------------------*/
 
 /*---MAIN-GLOBAL---*/
-.card {
-  &__item {
-    padding: 40px;
-    box-sizing: border-box;
-    transition: 0.5s;
-    -webkit-box-shadow: 0;
-    -moz-box-shadow: 0;
-    box-shadow: 0;
-    border-radius: 10px;
-    max-width: 453px;
-  }
 
-  &__item--german {
-    background-color: #def1ff;
-  }
-
-  &__item--german:hover {
-    transition: 0.5s;
-    -webkit-box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
-    -moz-box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
-    box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
-  }
-
-  &__item--china {
-    background-color: #fdede4;
-  }
-
-  &__item--china:hover {
-    transition: 0.5s;
-    -webkit-box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
-    -moz-box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
-    box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
-  }
-
-  &__item--spain {
-    background-color: #efefff;
-  }
-
-  &__item--spain:hover {
-    transition: 0.5s;
-    -webkit-box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
-    -moz-box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
-    box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
-  }
-
-  &__item img {
-    margin-left: 0;
-    margin-bottom: 20px;
-  }
-
-  &__item-text--big {
-    display: block;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 30px;
-    color: #232323;
-    margin-bottom: 20px;
-  }
-
-  &__item-text {
-    display: block;
-    margin-bottom: 3px;
-  }
-
-  &__item-info {
-    margin-bottom: 25px;
-  }
-
-  &__item-detail {
+.crumbs {
+  &__list {
     display: flex;
+    margin-bottom: 28px;
     align-items: center;
-    justify-content: space-between;
   }
 
-  &__item-link {
-    position: relative;
-    color: #8e49a0;
-    font-weight: 600;
+  &__list li {
+    margin-right: 10px;
+    font-weight: 500;
   }
 
-  &__item-link::after {
-    content: "";
-    position: absolute;
-    margin-left: 10px;
-    width: 18px;
-    height: 20px;
-    background: url(../images/arrow-right.svg) no-repeat center;
+  &__link {
+    text-decoration: underline;
+    color: #78258d;
   }
 
-  &__item-price {
-    font-size: 20px;
-    line-height: 1.1em;
+  &__arrow {
+    font-size: 24px;
     font-weight: 700;
+  }
+}
+
+.select {
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
+  margin-bottom: 32px;
+
+  &__item {
+    margin-right: 15px;
+    padding: 0 20px;
+    line-height: 34px;
+    height: 34px;
+    text-align: center;
+    background-color: #efefff;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  &__item.active {
+    background-color: #78258d;
+    color: #ffffff;
+  }
+
+  &__item:hover {
+    cursor: pointer;
+  }
+}
+
+.filter {
+  &__inner {
+    width: 331px;
+    margin-left: 40px;
+  }
+
+  &__item {
+    padding: 30px;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    margin-bottom: 30px;
+  }
+  
+  &__form {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -311,7 +286,7 @@
 
   &__image img {
     object-fit: contain;
-    
+
     overflow: hidden;
   }
 }
@@ -329,6 +304,100 @@
 
   &__title h2 {
     max-width: 650px;
+  }
+
+  &__item {
+    padding: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    -webkit-box-shadow: 0;
+    -moz-box-shadow: 0;
+    box-shadow: 0;
+    border-radius: 10px;
+    max-width: 453px;
+  }
+
+  &__item--german {
+    background-color: #def1ff;
+  }
+
+  &__item--german:hover {
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
+    -moz-box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
+    box-shadow: 0px 0px 6px 4px rgba(81, 162, 217, 0.2);
+  }
+
+  &__item--china {
+    background-color: #fdede4;
+  }
+
+  &__item--china:hover {
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
+    -moz-box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
+    box-shadow: 0px 0px 6px 4px rgba(228, 33, 37, 0.2);
+  }
+
+  &__item--spain {
+    background-color: #efefff;
+  }
+
+  &__item--spain:hover {
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
+    -moz-box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
+    box-shadow: 0px 0px 6px 4px rgba(145, 145, 215, 0.2);
+  }
+
+  &__item img {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  &__item-text--big {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #232323;
+    margin-bottom: 20px;
+  }
+
+  &__item-text {
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  &__item-info {
+    margin-bottom: 25px;
+  }
+
+  &__item-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item-link {
+    position: relative;
+    color: #8e49a0;
+    font-weight: 600;
+  }
+
+  &__item-link::after {
+    content: "";
+    position: absolute;
+    margin-left: 10px;
+    width: 18px;
+    height: 20px;
+    background: url(../images/arrow-right.svg) no-repeat center;
+  }
+
+  &__item-price {
+    font-size: 20px;
+    line-height: 1.1em;
+    font-weight: 700;
   }
 
   &__btn-mobile {
@@ -721,8 +790,6 @@
     justify-content: space-between;
   }
 
-
-
   &__image img {
     object-position: 40px -15px;
     object-fit: contain;
@@ -1035,8 +1102,7 @@
   }
 
   .reviews {
-
-    &__image img{
+    &__image img {
       object-position: center;
     }
     &__image {
@@ -1079,7 +1145,6 @@
   }
 
   .news {
-
     &__items {
       flex-direction: column;
     }
@@ -1103,7 +1168,7 @@
     }
 
     &__title-image {
-     display: block;
+      display: block;
     }
 
     &__image {
@@ -1130,8 +1195,6 @@
     &__desc-title {
       padding-top: 0;
     }
-
-   
   }
 
   .group {
@@ -1207,7 +1270,6 @@
   }
 
   .record {
- 
     &__inner {
       padding: 32px 16px;
     }
@@ -1300,7 +1362,7 @@
       flex-direction: column-reverse;
     }
 
-    &__btn{
+    &__btn {
       width: 100%;
     }
   }

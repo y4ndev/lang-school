@@ -1,41 +1,45 @@
 /*Slider*/
-new Swiper(".courses__slides", {
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  loop: true,
-  spaceBetween: 40,
-
-  breakpoints: {
-    1200: {
-      slidesPerGroup: 3,
-      slidesPerView: 3,
+if (document.querySelector(".courses__slides") != null) {
+  new Swiper(".courses__slides", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
-    768: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-    },
-    320: {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-    },
-  },
-});
 
-new Swiper(".reviews__slides", {
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+    loop: true,
+    spaceBetween: 40,
 
-  slidesPerView: 1,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: true,
-  },
-});
+    breakpoints: {
+      1200: {
+        slidesPerGroup: 3,
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+    },
+  });
+}
+
+if (document.querySelector(".reviews__slides") != null) {
+  new Swiper(".reviews__slides", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    slidesPerView: 1,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
+    },
+  });
+}
 
 let init = false;
 let groupSlides = document.querySelector(".group__items");

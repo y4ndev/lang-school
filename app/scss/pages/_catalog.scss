@@ -1,0 +1,15 @@
+.catalog-courses {
+  &__content {
+    display: flex;
+  }
+
+  &__items {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex-basis: 48%;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}
