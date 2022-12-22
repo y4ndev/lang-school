@@ -81,11 +81,18 @@
 
 //HEADER-MEDIA
 @include md {
+
+  body.lock {
+    overflow: hidden;
+  }
   .header {
+    
     &__inner {
       margin-bottom: 40px;
+      position: relative;
     }
     &__menu {
+      bottom: 1px;
       position: fixed;
       left: -100%;
       opacity: 0;
@@ -94,10 +101,10 @@
     &__menu.active {
       transition: all 0.3s;
       display: block;
-      height: 100%;
+      
       position: fixed;
       z-index: 15;
-      top: 0;
+      top: 89px;
       left: 0;
       right: 0;
       margin: auto;

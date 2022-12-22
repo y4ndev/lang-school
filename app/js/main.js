@@ -115,12 +115,28 @@ let burgerMenu = document.querySelector(".header__menu");
 let burgerClose = document.querySelector(".burger__close");
 
 burger.addEventListener("click", () => {
-  burgerMenu.classList.add("active");
-  burgerClose.classList.add("active");
-  document.body.style.overflow = "hidden";
+  burger.classList.toggle("active");
+  burgerMenu.classList.toggle("active");
+  document.querySelector("body").classList.toggle("lock");
 });
-burgerClose.addEventListener("click", () => {
-  burgerMenu.classList.remove("active");
-  burgerClose.classList.remove("active");
-  document.body.style.overflow = "auto";
+/*Tabs-filter*/
+
+let selectBtn = document.querySelectorAll("[data-select]");
+let catalogItem = document.querySelectorAll("[data-lang]");
+
+selectBtn.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    selectBtn.forEach((elem) => {
+      elem.classList.remove("active");
+      this.classList.add("active");
+    });
+    let data = e.target.getAttribute("data-select");
+    catalogItem.forEach((item) => {
+      if (item.getAttribute("data-lang") === data) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  });
 });

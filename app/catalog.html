@@ -66,14 +66,14 @@
                   <h2>Курсы</h2>
                 </div>
                 <div class="courses__select select">
-                  <div class="coureses__select-item select__item active">Все</div>
-                  <div class="coureses__select-item select__item">Китайский</div>
-                  <div class="coureses__select-item select__item">Английский</div>
-                  <div class="coureses__select-item select__item">Немецкий</div>
-                  <div class="coureses__select-item select__item">Испанский</div>
+                  <div class="courses__select-item select__item active" data-select="all">Все</div>
+                  <div class="courses__select-item select__item" data-select="china">Китайский</div>
+                  <div class="courses__select-item select__item" data-select="eng">Английский</div>
+                  <div class="courses__select-item select__item" data-select="german">Немецкий</div>
+                  <div class="courses__select-item select__item" data-select="spain">Испанский</div>
                 </div>
                 <div class="catalog-courses__content">
-                  <div class="courses__items catalog-courses__items">
+                  <div class="courses__items catalog-courses__items active" data-lang="all">
                     <div class="courses__item catalog-courses__item courses__item--german">
                       <img src="../images/city-1.png" alt="city" />
                       <span class="courses__item-text--big"
@@ -171,6 +171,136 @@
                     </div>
                   </div>
 
+                  <div class="courses__items catalog-courses__items" data-lang="china">
+                    <div class="courses__item catalog-courses__item courses__item--china">
+                      <img src="../images/city-2.png" alt="city" />
+                      <span class="courses__item-text--big"
+                        ><a href="#">Китайский для среднего уровня</a></span
+                      >
+                      <div class="courses__item-info">
+                        <span class="courses__item-text"> Длительность: <b>45 часов</b></span>
+                        <span class="courses__item-text">Модулей: <b>3</b></span>
+                      </div>
+                      <div class="courses__item-detail">
+                        <a class="courses__item-link"
+                          >Узнать подробнее
+                          <span class="courses__item-arrow"></span>
+                        </a>
+                        <span class="courses__item-price">От 6 520 Р</span>
+                      </div>
+                    </div>
+                    <div class="courses__item catalog-courses__item courses__item--china">
+                      <img src="../images/city-2.png" alt="city" />
+                      <span class="courses__item-text--big"
+                        ><a href="#">Китайский для среднего уровня</a></span
+                      >
+                      <div class="courses__item-info">
+                        <span class="courses__item-text"> Длительность: <b>45 часов</b></span>
+                        <span class="courses__item-text">Модулей: <b>3</b></span>
+                      </div>
+                      <div class="courses__item-detail">
+                        <a class="courses__item-link"
+                          >Узнать подробнее
+                          <span class="courses__item-arrow"></span>
+                        </a>
+                        <span class="courses__item-price">От 6 520 Р</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="courses__items catalog-courses__items" data-lang="eng">
+                    <div class="courses__item catalog-courses__item courses__item--eng"></div>
+                  </div>
+                  <div class="courses__items catalog-courses__items" data-lang="german">
+                    <div class="courses__item catalog-courses__item courses__item--german">
+                      <img src="../images/city-1.png" alt="city" />
+                      <span class="courses__item-text--big"
+                        ><a href="">Немецкий для начального уровня</a></span
+                      >
+                      <div class="courses__item-info">
+                        <span class="courses__item-text"> Длительность: <b>45 часов</b></span>
+                        <span class="courses__item-text">Модулей: <b>3</b></span>
+                      </div>
+                      <div class="courses__item-detail">
+                        <a class="courses__item-link">Узнать подробнее</a>
+                        <span class="courses__item-price">От 6 520 Р</span>
+                      </div>
+                    </div>
+                    <div class="courses__item catalog-courses__item courses__item--german">
+                      <img src="../images/city-1.png" alt="city" />
+                      <span class="courses__item-text--big"
+                        ><a href="">Немецкий для начального уровня</a></span
+                      >
+                      <div class="courses__item-info">
+                        <span class="courses__item-text"> Длительность: <b>45 часов</b></span>
+                        <span class="courses__item-text">Модулей: <b>3</b></span>
+                      </div>
+                      <div class="courses__item-detail">
+                        <a class="courses__item-link">Узнать подробнее</a>
+                        <span class="courses__item-price">От 6 520 Р</span>
+                      </div>
+                    </div>
+                    <div class="courses__item catalog-courses__item courses__item--german">
+                      <img src="../images/city-1.png" alt="city" />
+                      <span class="courses__item-text--big"
+                        ><a href="">Немецкий для начального уровня</a></span
+                      >
+                      <div class="courses__item-info">
+                        <span class="courses__item-text"> Длительность: <b>45 часов</b></span>
+                        <span class="courses__item-text">Модулей: <b>3</b></span>
+                      </div>
+                      <div class="courses__item-detail">
+                        <a class="courses__item-link">Узнать подробнее</a>
+                        <span class="courses__item-price">От 6 520 Р</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="courses__items catalog-courses__items" data-lang="spain">
+                    <div class="courses__item catalog-courses__item courses__item--spain">
+                      <img src="../images/city-3.png" alt="city" />
+                      <span class="courses__item-text--big"
+                        ><a href="#">Испанский для среднего уровня</a></span
+                      >
+                      <div class="courses__item-info">
+                        <span class="courses__item-text"> Длительность: <b>45 часов</b></span>
+                        <span class="courses__item-text">Модулей: <b>3</b></span>
+                      </div>
+                      <div class="courses__item-detail">
+                        <a class="courses__item-link">Узнать подробнее</a>
+                        <span class="courses__item-price">От 6 520 Р</span>
+                      </div>
+                    </div>
+                    <div class="courses__item catalog-courses__item courses__item--spain">
+                      <img src="../images/city-3.png" alt="city" />
+                      <span class="courses__item-text--big"
+                        ><a href="#">Испанский для среднего уровня</a></span
+                      >
+                      <div class="courses__item-info">
+                        <span class="courses__item-text"> Длительность: <b>45 часов</b></span>
+                        <span class="courses__item-text">Модулей: <b>3</b></span>
+                      </div>
+                      <div class="courses__item-detail">
+                        <a class="courses__item-link">Узнать подробнее</a>
+                        <span class="courses__item-price">От 6 520 Р</span>
+                      </div>
+                    </div>
+                    <div class="courses__item catalog-courses__item courses__item--spain">
+                      <img src="../images/city-3.png" alt="city" />
+                      <span class="courses__item-text--big"
+                        ><a href="#">Испанский для среднего уровня</a></span
+                      >
+                      <div class="courses__item-info">
+                        <span class="courses__item-text"> Длительность: <b>45 часов</b></span>
+                        <span class="courses__item-text">Модулей: <b>3</b></span>
+                      </div>
+                      <div class="courses__item-detail">
+                        <a class="courses__item-link">Узнать подробнее</a>
+                        <span class="courses__item-price">От 6 520 Р</span>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="filter">
                     <div class="filter__inner">
                       <div class="courses__filter-item filter__item">
@@ -199,7 +329,7 @@
                           </label>
                           <label>
                             <input type="radio" name="goal" />
-                           <span>Студенты</span>
+                            <span>Студенты</span>
                           </label>
                           <label>
                             <input type="radio" name="goal" />
