@@ -1,6 +1,3 @@
-//@import "../../node_modules/slick-carousel/slick/slick";
-//@import "../../node_modules/magnific-popup/dist/magnific-popup";
-
 @import "vendors/variables";
 @import "vendors/mixins";
 @import "vendors/normalize";
@@ -15,5 +12,7 @@
 @import "layout/forms";
 @import "layout/header";
 @import "layout/grid";
-@import "pages/catalog";
 @import "layout/footer";
+
+@import "pages/catalog";
+@import "pages/blog";

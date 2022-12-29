@@ -1,3 +1,4 @@
+/*----------CATALOG-GRID----------*/
 .catalog-courses {
   &__content {
     display: flex;
@@ -20,7 +21,163 @@
     max-width: 100%;
     margin-bottom: 40px;
   }
-
-
-  
 }
+
+//*=========================================================================================
+
+.filter {
+  &__inner {
+    width: 331px;
+    margin-left: 40px;
+  }
+
+  &__item {
+    padding: 30px;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    margin-bottom: 30px;
+  }
+
+  &__big {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form label {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__form label span {
+    color: #828282;
+  }
+
+  &__form input[type="radio"] {
+    box-sizing: border-box;
+    appearance: none;
+    background: white;
+
+    border: 1px solid #bb92c6;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  &__form input[type="radio"]:checked {
+    display: inline-block;
+    background-color: #78258d;
+    border-color: #78258d;
+  }
+
+  &__form input[type="radio"]:checked + span {
+    color: #333333;
+  }
+
+  &__form input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: url(../../images/input.svg) no-repeat center;
+  }
+
+  &__title {
+    display: none;
+  }
+
+  &__item.mobile {
+    display: none;
+  }
+
+  &__form-btn {
+    display: none;
+  }
+}
+
+//CATALOG-MEDIA
+
+@include lg {
+  .filter {
+    display: none;
+
+    &__inner {
+      width: auto;
+      margin-bottom: 100px;
+    }
+
+    &__title {
+      margin-bottom: 60px;
+      display: block;
+      padding-top: 30px;
+    }
+
+    &__item.mobile {
+      display: block;
+    }
+
+    &__item {
+      box-shadow: none;
+      margin-bottom: 40px;
+      padding: 0;
+    }
+
+    &__form-inner {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__form label {
+      margin-right: 15px;
+    }
+
+    &__form-btn {
+      display: block;
+      width: 268px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  .filter.active {
+    display: block;
+    position: absolute;
+    height: 100%;
+
+    width: 100%;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 5;
+  }
+
+  .filter.active .filter__inner {
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+
+@include md {
+  .catalog-courses {
+    &__items {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__item {
+      flex-basis: 100%;
+    }
+  }
+}
+
+/*-------------------------------*/

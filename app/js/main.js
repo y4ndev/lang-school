@@ -83,8 +83,14 @@ function swiperCard() {
     init = false;
   }
 }
-swiperCard();
-window.addEventListener("resize", swiperCard);
+
+if (
+  document.querySelector(".group__slides") != null &&
+  document.querySelector(".tutorial__slides") != null
+) {
+  swiperCard();
+  window.addEventListener("resize", swiperCard);
+}
 
 /*---Animation---*/
 AOS.init();
@@ -112,17 +118,34 @@ document.addEventListener("DOMContentLoaded", () => {
 /*Burger-menu*/
 let burger = document.querySelector(".burger__menu");
 let burgerMenu = document.querySelector(".header__menu");
-let burgerClose = document.querySelector(".burger__close");
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("active");
   burgerMenu.classList.toggle("active");
   document.querySelector("body").classList.toggle("lock");
 });
+
+/*Filter-menu*/
+if (document.querySelector(".filter") != null) {
+  let filter = document.querySelector(".select__btn");
+  let filterMenu = document.querySelector(".filter");
+  let filterFind = document.querySelector(".filter__form-btn");
+
+  filter.addEventListener("click", () => {
+    filter.classList.toggle("active");
+    filterMenu.classList.toggle("active");
+    filterFind.classList.remove("active");
+  });
+
+  filterFind.addEventListener("click", () => {
+    filterMenu.classList.remove("active");
+  });
+}
+
 /*Tabs-filter*/
 
 let selectBtn = document.querySelectorAll("[data-select]");
-let catalogItem = document.querySelectorAll("[data-lang]");
+let catalogItem = document.querySelectorAll("[data-type]");
 
 selectBtn.forEach((item) => {
   item.addEventListener("click", function (e) {
@@ -132,7 +155,7 @@ selectBtn.forEach((item) => {
     });
     let data = e.target.getAttribute("data-select");
     catalogItem.forEach((item) => {
-      if (item.getAttribute("data-lang") === data) {
+      if (item.getAttribute("data-type") === data) {
         item.classList.add("active");
       } else {
         item.classList.remove("active");

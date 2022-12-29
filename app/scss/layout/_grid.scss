@@ -42,6 +42,24 @@
     font-weight: 500;
   }
 
+  &__mobile {
+    display: none;
+  }
+  &__btn {
+    border-radius: 10px;
+  }
+
+  &__btn-name {
+    display: none;
+  }
+
+  &__btn:hover {
+    cursor: pointer;
+    background-color: #efefff;
+    transition: background-color 0.2s linear;
+    outline: 2px solid #78258d;
+  }
+
   &__item.active {
     background-color: #78258d;
     color: #ffffff;
@@ -49,120 +67,6 @@
 
   &__item:hover {
     cursor: pointer;
-  }
-}
-
-.filter {
-  &__inner {
-    width: 331px;
-    margin-left: 40px;
-  }
-
-  &__item {
-    padding: 30px;
-    -webkit-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
-    -moz-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
-    box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
-    margin-bottom: 30px;
-  }
-
-  &__big {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 20px;
-  }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__form label {
-    margin-bottom: 18px;
-    display: flex;
-    align-items: center;
-  }
-
-  &__form label span {
-    color: #828282;
-  }
-
-  &__form input[type="radio"] {
-    box-sizing: border-box;
-    appearance: none;
-    background: white;
-
-    border: 1px solid #bb92c6;
-    border-radius: 4px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    margin-right: 15px;
-  }
-
-  &__form input[type="radio"]:checked {
-    display: inline-block;
-    background-color: #78258d;
-    border-color: #78258d;
-  }
-
-  &__form input[type="radio"]:checked + span {
-    color: #333333;
-  }
-
-  &__form input[type="radio"]:checked::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background: url(../../images/input.svg) no-repeat center;
-  }
-}
-
-.article {
-  &__item {
-    width: 453px;
-    border-radius: 20px;
-    padding: 40px;
-    border: 1px solid #efefff;
-    -webkit-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
-    -moz-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
-    box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
-  }
-
-  &__item-title {
-    margin-bottom: 12px;
-  }
-
-  &__item-title a:hover {
-    color: #78258d;
-  }
-
-  &__item-date {
-    color: #2e90d1;
-  }
-
-  &__item-text {
-    color: #585858;
-    font-weight: 500;
-    line-height: 24px;
-  }
-
-  &__item-interact {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__item-btn {
-    padding: 10px 20px;
-    background-color: #efefff;
-    font-weight: 500;
-  }
-
-  &__item-link {
-    color: #8e49a0;
-    font-weight: 500;
   }
 }
 
@@ -1000,6 +904,51 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  &__item {
+    width: 453px;
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid #efefff;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+    box-shadow: 0px 0px 13px 3px rgba(190, 204, 215, 0.12);
+  }
+
+  &__item-title {
+    margin-bottom: 12px;
+  }
+
+  &__item-title a:hover {
+    color: #78258d;
+  }
+
+  &__item-date {
+    color: #2e90d1;
+  }
+
+  &__item-text {
+    color: #585858;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  &__item-interact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item-btn {
+    padding: 10px 20px;
+    background-color: #efefff;
+    font-weight: 500;
+  }
+
+  &__item-link {
+    color: #8e49a0;
+    font-weight: 500;
+  }
 }
 
 //*=========================================================================================
@@ -1042,6 +991,11 @@
 //*=========================================================================================
 
 @include lg {
+  .select {
+    &__btn {
+      display: flex;
+    }
+  }
   .card {
     &__item-link {
       font-size: 14px;
@@ -1227,6 +1181,26 @@
 //*=========================================================================================
 
 @include md {
+  .select {
+    &__item {
+      display: none;
+    }
+    &__btn {
+      align-items: center;
+      border-radius: 10px;
+      border: 2px solid #78258d;
+      background-color: #efefff;
+      padding: 0 10px;
+    }
+
+    &__btn-name {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #78258d;
+      margin-right: 10px;
+    }
+  }
   .main-text {
     font-size: 18px;
   }
@@ -1373,6 +1347,10 @@
     &__btn-mobile {
       display: block;
       text-align: center;
+    }
+
+    &__item {
+      padding: 24px;
     }
   }
 
