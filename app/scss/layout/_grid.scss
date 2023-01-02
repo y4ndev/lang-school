@@ -31,6 +31,10 @@
   align-items: center;
   margin-bottom: 32px;
 
+  &__btn {
+    display: none;
+  }
+
   &__item {
     margin-right: 15px;
     padding: 0 20px;
@@ -617,6 +621,10 @@
     align-self: flex-end;
   }
 
+  &__image-title {
+    display: none;
+  }
+
   &__desc-name {
     background: rgb(46, 144, 209);
     background: linear-gradient(180deg, rgba(46, 144, 209, 1) 35%, rgba(120, 37, 141, 1) 100%);
@@ -889,6 +897,11 @@
     margin-bottom: 60px;
   }
 
+  &__title-text {
+    display: block;
+    color: #78258d;
+  }
+
   &__title h2 {
     margin-bottom: 0;
   }
@@ -945,6 +958,14 @@
     font-weight: 500;
   }
 
+  &__item-btn--interes {
+    background-color: #ffefef;
+  }
+
+  &__item-btn--state {
+    background-color: #def1ff;
+  }
+
   &__item-link {
     color: #8e49a0;
     font-weight: 500;
@@ -964,6 +985,16 @@
   &__title {
     max-width: 445px;
     margin-bottom: 60px;
+  }
+
+  &__title-text {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #585858;
+    max-width: 315px;
   }
 
   &__title-image {
@@ -1182,15 +1213,17 @@
 
 @include md {
   .select {
-    &__item {
-      display: none;
-    }
+    flex-wrap: wrap;
     &__btn {
       align-items: center;
       border-radius: 10px;
       border: 2px solid #78258d;
       background-color: #efefff;
       padding: 0 10px;
+    }
+
+    &__item {
+      margin-bottom: 10px;
     }
 
     &__btn-name {
@@ -1215,6 +1248,12 @@
 
     &__desc-title {
       padding-top: 0;
+    }
+  }
+
+  .courses {
+    &__select-item {
+      display: none;
     }
   }
 

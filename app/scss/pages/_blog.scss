@@ -5,30 +5,46 @@
     align-items: flex-start;
   }
   &__image {
-    width: 100%;
+    min-width: 455px;
+    margin-left: 50px;
+  }
+
+  &__image img {
+    margin-right: 0;
   }
 
   &__items {
     flex-wrap: wrap;
+    display: none;
+  }
+
+  &__items.active {
+    display: flex;
   }
 
   &__item {
-    flex-basis: 49%;
     margin-bottom: 40px;
+    flex-basis: 49%;
+    width: 100%;
   }
 
-  &__item:first-child {
+  &__items[data-type="0"] &__item:first-child {
     flex-basis: 100%;
   }
 }
 
-
-@include lg {
-    .blog-news {
-        &__image {
-            display: none;
-        }
+@include xl {
+  .blog-news {
+    &__image {
+      display: none;
     }
+  }
 }
 
-
+@include lg {
+  .blog-news {
+    &__image {
+      display: none;
+    }
+  }
+}
