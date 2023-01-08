@@ -26,6 +26,19 @@ if (document.querySelector(".courses__slides") != null) {
   });
 }
 
+if (document.querySelector(".teachers__slides") != null) {
+  new Swiper(".teachers__slides", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    centeredSlides: true,
+    spaceBetween: 32,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+  });
+}
+
 if (document.querySelector(".reviews__slides") != null) {
   new Swiper(".reviews__slides", {
     pagination: {
@@ -51,6 +64,7 @@ function swiperCard() {
     if (!init) {
       groupSlides.classList.add("swiper-wrapper");
       tutorialSlides.classList.add("swiper-wrapper");
+
       init = true;
       swiper = new Swiper(".group__slides", {
         direction: "horizontal",
@@ -161,5 +175,43 @@ selectBtn.forEach((item) => {
         item.classList.remove("active");
       }
     });
+  });
+});
+
+/*---Popup---*/
+
+const modalBtn = document.querySelectorAll(".btn");
+const modalsOverlay = document.querySelector(".modals__overlay");
+const modalClose = document.querySelectorAll(".modal__close");
+const modal = document.querySelectorAll(".modal");
+
+modalBtn.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    path = e.currentTarget.getAttribute("data-path");
+
+    modal.forEach((el) => {
+      el.classList.remove("modal--visible");
+    });
+
+    document.querySelector(`[data-target="${path}"]`).classList.add("modal--visible");
+    modalsOverlay.classList.add("modals__overlay--visible");
+  });
+});
+
+modalsOverlay.addEventListener("click", (e) => {
+  if (e.target == modalsOverlay) {
+    modalsOverlay.classList.remove("modals__overlay--visible");
+    modal.forEach((el) => {
+      el.classList.remove("modal--visible");
+    });
+  }
+});
+
+modalClose.forEach((el) => {
+  el.addEventListener("click", () => {
+    modal.forEach((el) => {
+      el.classList.remove("modal--visible");
+    });
+    modalsOverlay.classList.remove("modals__overlay--visible");
   });
 });

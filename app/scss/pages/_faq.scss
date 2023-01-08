@@ -36,7 +36,8 @@
 @include lg {
   .faq-questions {
     &__title {
-      flex-direction: row-reverse;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 }
@@ -44,8 +45,7 @@
 @include md {
   .faq-questions {
     &__title {
-      flex-direction: column-reverse;
-      align-items: center;
+      flex-direction: column;
     }
 
     &__btn {

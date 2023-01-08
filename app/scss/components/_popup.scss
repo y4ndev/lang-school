@@ -1,9 +1,217 @@
 /*------------------POPUP------------------*/
 
+.modals {
+  &__overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    opacity: 0;
+    transition: all 0.3s;
+    visibility: hidden;
+  }
+}
 
+.modal {
+  width: 488px;
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 7px;
+  position: relative;
+  display: none;
 
+  &__title {
+    margin-bottom: 40px;
+  }
 
+  &__title-text {
+    display: inline-block;
+    max-width: 379px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #828282;
+  }
 
+  &__form-num {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: 500;
+  }
 
+  &__form > * {
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 40px;
+    border: 2px solid #78258d !important;
+  }
+
+  &__input:focus {
+    outline: none !important;
+  }
+
+  &__btn {
+    margin-bottom: 20px;
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__btn-gos-text {
+    position: relative;
+  }
+
+  &__btn-vk-text {
+    position: relative;
+  }
+
+  &__btn-yandex-text {
+    position: relative;
+  }
+
+  &__btn-gos-text::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(../../images/gos-btn.svg);
+    left: -40px;
+    top: -4px;
+  }
+
+  &__btn-vk-text::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(../../images/vk-btn.svg);
+    left: -40px;
+    top: -4px;
+  }
+
+  &__btn-yandex-text::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(../../images/yandex-btn.svg) no-repeat;
+    left: -40px;
+    top: -4px;
+  }
+
+  &__btn-yandex-text::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: url(../../images/yandex-2-btn.svg) no-repeat;
+    left: -33px;
+    top: 1px;
+  }
+
+  &__btn:hover {
+    color: #0d4cd3;
+    border-color: #0d4cd3;
+    cursor: pointer;
+  }
+
+  &__btn-enter {
+    margin-bottom: 20px;
+  }
+
+  &__line {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    color: #828282;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  &__line::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 40%;
+    background-color: #bdbdbd;
+    left: 0;
+    top: 9px;
+  }
+
+  &__line::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+
+    width: 40%;
+    background-color: #bdbdbd;
+    right: 0;
+    top: 9px;
+  }
+
+  &__close {
+    width: 30px;
+    height: 30px;
+    top: 13px;
+
+    position: absolute;
+    right: 13px;
+    cursor: pointer;
+  }
+
+  &__close::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #bdbdbd;
+    transform: rotate(45deg);
+  }
+
+  &__close::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #bdbdbd;
+    transform: rotate(-45deg);
+  }
+}
+
+.modals__overlay--visible {
+  opacity: 1;
+  transition: all 0.3s;
+  visibility: visible;
+}
+
+.modal--visible {
+  display: block;
+}
+
+@include sm {
+  .modal {
+    width: 100%;
+   
+  }
+}
 
 /*------------------------------------------*/

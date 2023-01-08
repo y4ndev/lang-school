@@ -1,0 +1,150 @@
+.page-about {
+  &__title {
+    text-align: left;
+  }
+
+  &__title h2 {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: #585858;
+  }
+
+  &__big {
+    font-weight: 900;
+  }
+
+  &__top-info,
+  &__middle-info,
+  &__bottom-info {
+    max-width: 680px;
+  }
+  &__top-info::before,
+  &__middle-info::before,
+  &__bottom-info::before {
+    display: none;
+  }
+
+  &__top-title,
+  &__middle-title,
+  &__bottom-title {
+    max-width: 700px;
+  }
+
+  &__middle-text {
+    max-width: 700px;
+  }
+}
+
+.teachers {
+  &__inner {
+    margin-bottom: 100px;
+  }
+  &__title {
+    text-align: center;
+    max-width: 892px;
+    margin: 0 auto;
+    margin-bottom: 85px;
+  }
+
+  &__title-text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #585858;
+  }
+
+  &__items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__slides {
+    display: none;
+  }
+
+  &__item {
+    text-align: center;
+    flex-basis: 25%;
+  }
+
+  &__item img {
+    transition: all 0.3s;
+  }
+
+  &__item img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 7px;
+  }
+
+  &__item img {
+    margin-bottom: 28px;
+  }
+
+  &__item-name {
+    font-size: 20px;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__item-about {
+    font-size: 20px;
+    display: inline-block;
+    font-weight: 500;
+    color: #828282;
+    margin-bottom: 15px;
+  }
+}
+
+@include lg {
+  .teachers {
+    &__items {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    &__item {
+      flex-basis: 45%;
+      margin-bottom: 40px;
+    }
+
+    &__item-name {
+      font-size: 18px;
+    }
+
+    &__item-about {
+      font-size: 18px;
+    }
+  }
+}
+
+@include sm {
+  .teachers {
+    &__items.active {
+      display: none;
+    }
+
+    &__slides {
+      display: block;
+      overflow: hidden;
+    
+    }
+    &__items {
+      flex-wrap: nowrap;
+      justify-content:stretch;
+
+    }
+
+    &__item {
+      flex-basis: 100%;
+      margin-right: 0;
+
+    }
+  }
+}

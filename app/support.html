@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>School</title>
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="libs/aos/aos.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
@@ -53,7 +54,7 @@
         </div>
       </header>
 
-      <main class="main contacts-main">
+      <div class="main support-main">
         <div class="container">
           <div class="crumbs">
             <ul class="crumbs__list">
@@ -62,80 +63,82 @@
               <li>Контакты</li>
             </ul>
           </div>
-          <section class="contacts" data-aos="fade-in">
-            <div class="contacts__title">
-              <h2>Контакты</h2>
-              <span class="contacts__title-text">Мы на связи в любое удобное время</span>
-            </div>
-            <div class="contacts__inner">
-              <div class="contacts__feedback">
-                <div class="contacts__feedback-item">
-                  <span class="contacts__feedback-title">Телефон</span>
-                  <span class="contacts__feedback-text">+7 (495) 156-35-50</span>
-                </div>
-                <div class="contacts__feedback-item">
-                  <span class="contacts__feedback-title">По электронке</span>
-                  <a class="contacts__feedback-link" href="#">info@language2go.ru </a>
-                  <a class="contacts__feedback-link" href="#">support@language2go.ru </a>
-                </div>
-                <div class="contacts__feedback-item">
-                  <span class="contacts__feedback-title">В соц. сетях</span>
-                  <div class="contacts__feedback-social">
-                    <a href="#"><img src="./images/facebook-1.svg" alt="" /></a>
-                    <a href="#"><img src="./images/youtube-1.svg" alt="" /></a>
-                    <a href="#"><img src="./images/twitter-1.svg" alt="" /></a>
-                    <a href="#"><img src="./images/vk-1.svg" alt="" /></a>
-                  </div>
-                </div>
-              </div>
-              <div class="contacts__help">
-                <div class="contacts__help-title">
-                  <span class="contacts__help-big">Нужна помощь с выбором курса?</span>
-                  <span class="contacts__help-text"
-                    >Оставьте заявку и мы подберем индивидуальное решение</span
+
+          <section class="support" data-aos="fade-in">
+            <div class="support__inner">
+              <div class="support__content">
+                <div class="support__title">
+                  <h2>Служба поддержки <span class="support__title-color">Language to go</span></h2>
+
+                  <span class="support__title-text"
+                    >Если у вас возникли трудности по работе сайта, сложности в оплате или есть
+                    вопрос, вы можете обратиться в службу поддержки, мы обязательно вам
+                    поможем.</span
                   >
                 </div>
 
-                <form class="contacts__help-form form">
-                  <div class="contacts__help-data">
-                    <label>
-                      <span class="contacts__help-text">Имя</span>
-                      <input
-                        required="required"
-                        maxlength="15"
-                        type="text"
-                        class="contacts__help-input form__input"
-                      />
-                    </label>
-                    <label>
-                      <span class="contacts__help-text">Телефон</span>
-                      <input
-                        required="required"
-                        type="tel"
-                        class="contacts__help-input form__input"
-                        placeholder="+7 (___) ___-__-__"
-                      />
-                    </label>
-                  </div>
-                  <div class="conctacts__help-message">
-                    <label>
-                      <span class="contacts__help-text">Сообщение</span>
-                      <textarea
-                        placeholder="Расскажите нам о возникшем вопрос"
-                        class="contacts__help-area form__input"
-                        maxlength="250"
-                      ></textarea>
-                    </label>
-                  </div>
-                  <button type="submit" class="btn-primary contacts__help-btn">
-                    Оставить заявку
-                  </button>
-                </form>
+                <p class="support__text">
+                  <span class="support__text-title"> Общая информация </span>
+                  Ясность нашей позиции очевидна: консультация с широким активом однозначно
+                  определяет каждого участника как способного принимать собственные решения касаемо
+                  прогресса профессионального сообщества. Как уже неоднократно упомянуто, сделанные
+                  на базе интернет-аналитики выводы призывают нас к новым свершениям, которые, в
+                  свою очередь, должны быть объединены в целые кластеры себе подобных. Являясь всего
+                  лишь частью общей картины, явные признаки победы институционализации подвергнуты
+                  целой серии независимых исследований.
+                </p>
+
+                <div class="support__help">
+                  <span class="support__help-big">Написать в службу поддержки</span>
+                  <span class="support__help-text">
+                    Оставьте заявку и мы постараемся вам помочь
+                  </span>
+                  <form class="support__help-form form">
+                    <div class="support__help-data">
+                      <label>
+                        <span class="support__help-text">Имя</span>
+                        <input
+                          placeholder="Введите имя"
+                          required="required"
+                          maxlength="15"
+                          type="text"
+                          class="support__help-input form__input"
+                        />
+                      </label>
+                      <label>
+                        <span class="support__help-text">Телефон</span>
+                        <input
+                          required="required"
+                          type="tel"
+                          class="support__help-input form__input"
+                          placeholder="+7 (___) ___-__-__"
+                        />
+                      </label>
+                    </div>
+                    <div class="conctacts__help-message">
+                      <label>
+                        <span class="support__help-text">Сообщение</span>
+                        <textarea
+                          placeholder="Расскажите нам о возникшем вопросе"
+                          class="support__help-area form__input"
+                          maxlength="250"
+                        ></textarea>
+                      </label>
+                    </div>
+                    <button type="submit" class="btn-primary support__help-btn">
+                      Оставить заявку
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="support__image">
+                <img src="./images/support-image.png" alt="support" />
               </div>
             </div>
           </section>
         </div>
-      </main>
+      </div>
 
       <footer class="footer">
         <div class="container">
@@ -220,6 +223,7 @@
           </div>
         </div>
       </footer>
+
       <div class="modals">
         <div class="modals__overlay">
           <div class="modal login-modal" data-target="one">
@@ -257,6 +261,7 @@
         </div>
       </div>
     </div>
+
     <script src="libs/aos/aos.js"></script>
     <script src="js/main.min.js"></script>
   </body>

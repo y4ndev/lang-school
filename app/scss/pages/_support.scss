@@ -1,0 +1,119 @@
+.support {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 140px;
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__title h2 {
+    max-width: 450px;
+  }
+
+  &__title-color {
+    color: #78258d;
+  }
+
+  &__text-title {
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 24px;
+  }
+  &__title-text {
+    display: inline-block;
+    max-width: 560px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #585858;
+  }
+  &__text {
+    max-width: 950px;
+    margin-bottom: 50px;
+  }
+
+  &__help-title {
+    margin-bottom: 24px;
+  }
+
+  &__help-big {
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__help-text {
+    color: #585858;
+    font-weight: 500;
+  }
+
+
+  &__help-text {
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: inline-block;
+  }
+  &__help-data {
+    display: flex;
+  }
+  &__help-data label {
+    flex-basis: 50%;
+    margin-bottom: 24px;
+  }
+
+  &__help-data label:first-of-type {
+    margin-right: 24px;
+  }
+
+  &__help-input {
+    background-color: #f2f2f2;
+    width: 100%;
+  }
+
+  &__help-input:focus {
+    background-color: #ffffff;
+  }
+
+  &__help-area {
+    background-color: #f2f2f2;
+    height: 148px;
+    resize: none;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  &__help-area:focus {
+    background-color: #ffffff;
+  }
+
+  &__image img {
+    min-width: 100%;
+  }
+}
+
+@include lg {
+  .support {
+    &__help {
+      width: 100%;
+    }
+
+    &__title-text {
+      font-size: 18px;
+    }
+    &__image {
+      display: none;
+    }
+  }
+}
+
+@include md {
+  .support {
+    &__help {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

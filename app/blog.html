@@ -13,33 +13,36 @@
       <header class="header">
         <div class="header__inner">
           <div class="header__left">
-            <a class="header__link" href="#"
+            <a class="header__link" href="/"
               ><img src="../images/header-logo1.svg" width="120" height="40" alt="logo"
             /></a>
 
             <nav class="header__menu">
               <ul class="header__menu-list">
-                <li><a class="header__menu-link" href="#">Курсы</a></li>
-                <li><a class="header__menu-link" href="#">О нас</a></li>
-                <li><a class="header__menu-link" href="#">Блог</a></li>
-                <li><a class="header__menu-link more" href="#">FAQ</a></li>
-                <li><a class="header__menu-link more" href="#">Контакты</a></li>
-                <li><a class="header__menu-link more" href="#">О нас</a></li>
+                <li><a class="header__menu-link" href="/catalog.html">Курсы</a></li>
+                <li><a class="header__menu-link" href="/about.html">О нас</a></li>
+                <li><a class="header__menu-link" href="/blog.html">Блог</a></li>
+                <li><a class="header__menu-link more" href="/faq.html">FAQ</a></li>
+                <li><a class="header__menu-link more" href="/contacts.html">Контакты</a></li>
+                <li><a class="header__menu-link more" href="/support.html">Поддержка</a></li>
+
                 <li class="header__menu-sub">
                   <a class="header__menu-link" href="#"
                     >Еще <span class="header__menu-more">&#x2039;</span></a
                   >
                   <ul class="header__sub-list">
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">О нас</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/contacts.html">Контакты</a></li>
+                    <li><a href="/support.html">Поддержка</a></li>
                   </ul>
                 </li>
               </ul>
             </nav>
           </div>
           <div class="header__right">
-            <button type="button" class="btn-primary header__menu-btn">Войти</button>
+            <button type="button" class="btn-primary header__menu-btn btn" data-path="one">
+              Войти
+            </button>
             <div class="burger">
               <div class="burger__menu">
                 <span></span>
@@ -54,7 +57,7 @@
         <div class="container">
           <div class="crumbs">
             <ul class="crumbs__list">
-              <li><a href="#" class="crumbs__link">Главная</a></li>
+              <li><a href="/" class="crumbs__link">Главная</a></li>
               <li class="crumbs__arrow">></li>
               <li>Блог</li>
             </ul>
@@ -213,8 +216,6 @@
                         >
                       </div>
                     </div>
-
-                    
                   </div>
                   <div class="news__items blog-news__items" data-type="2">
                     <div class="news__item blog-news__item">
@@ -315,7 +316,7 @@
         </div>
       </main>
 
-      <footer class="footer" data-aos="fade-in">
+      <footer class="footer">
         <div class="container">
           <div class="footer__inner">
             <div class="footer__top">
@@ -398,6 +399,42 @@
           </div>
         </div>
       </footer>
+      <div class="modals">
+        <div class="modals__overlay">
+          <div class="modal login-modal" data-target="one">
+            <span class="modal__close"></span>
+            <div class="modal__title">
+              <h2>Вход в кабинет</h2>
+              <span class="modal__title-text"
+                >На указанный номер поступит звонок с номера +7 (999) 999-ХХ-ХХ</span
+              >
+            </div>
+            <form class="modal__form">
+              <label>
+                <span class="modal__form-num">Телефон</span>
+                <input
+                  class="form__input modal__input"
+                  type="tel"
+                  placeholder="| + 7 900 123-45-67"
+                  name="telephone"
+                  required="required"
+                />
+              </label>
+              <button type="submit" class="btn-primary modal__btn-enter">Продолжить</button>
+              <span class="modal__line">или</span>
+              <button type="submit" class="modal__btn modal__btn-gos">
+                <span class="modal__btn-gos-text">Войти через госулсуги</span>
+              </button>
+              <button type="submit" class="modal__btn modal__btn-vk">
+                <span class="modal__btn-vk-text"> Войти через Вконтакте</span>
+              </button>
+              <button type="submit" class="modal__btn modal__btn-yandex">
+                <span class="modal__btn-yandex-text">Войти через Яндекс ID</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="libs/aos/aos.js"></script>
